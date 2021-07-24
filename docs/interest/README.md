@@ -2,8 +2,7 @@
 
 Paper management system built on GitHub Pages and Google {Forms, Sheets, Apps Script}.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/5164000/117146751-7ebc7100-adef-11eb-9561-e84a73de6be5.gif" width="70%" /></p>
-<p align="center"><video src="https://user-images.githubusercontent.com/5164000/126858475-ca454d79-7457-4b53-96c8-85b8c11626b3.mp4" width="70%" /></p>
+<p align="center"><img width="70%" src="https://user-images.githubusercontent.com/5164000/126862291-0b38d0da-0614-4772-81c8-b4ef159488a0.gif" /></p>
 
 ## Adding items
 
