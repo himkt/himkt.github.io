@@ -42,8 +42,8 @@ const Hero = () => (
                         <div className="content">
                         <span style={publication}><a href="https://twitter.com/himkt" target="_brank"><FontAwesomeIcon icon={faTwitter} size="lg" /></a></span>
                         <span style={publication}><a href="https://github.com/himkt" target="_brank"><FontAwesomeIcon icon={faGithub} size="lg" /></a></span>
-                        <span style={publication}><a href="https://www.linkedin.com/in/himkt" target="_blank"><FontAwesomeIcon icon={faLinkedin} size="lg" /></a></span>
-                        <span style={publication}><a href="https://scholar.google.com/citations?user=48jLQIwAAAAJ&hl=en&oi=ao" target="_blank"><FontAwesomeIcon icon={faGraduationCap} size="lg" /></a></span>
+                        <span style={publication}><a href="https://www.linkedin.com/in/himkt" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faLinkedin} size="lg" /></a></span>
+                        <span style={publication}><a href="https://scholar.google.com/citations?user=48jLQIwAAAAJ&hl=en&oi=ao" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGraduationCap} size="lg" /></a></span>
                         </div>
                         <p className="title is-5" style={{color: 'hsl(0, 0%, 29%)'}}>Links:</p>
                         <div className="content">
