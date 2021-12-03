@@ -29,7 +29,7 @@ const Header = () => (
                         <a className="navbar-item" href="https://instagram.com/himamako">Instagram</a>
                         <a className="navbar-item" href="https://www.linkedin.com/in/himkt/">LinkedIn</a>
                         <hr className="navbar-divider" />
-                        <a className="navbar-item is-active" href="/profile/resume.pdf" target="_blank">Resume</a>
+                        <a className="navbar-item is-active" href="/resume.pdf" target="_blank">Resume</a>
                     </div>
                     </div>
                 </div>
