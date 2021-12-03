@@ -28,7 +28,6 @@ const Header = () => (
                         <a className="navbar-item" href="https://qiita.com/klis">Qiita (Tech blog in Japanese)</a>
                         <a className="navbar-item" href="https://instagram.com/himamako">Instagram</a>
                         <a className="navbar-item" href="https://www.linkedin.com/in/himkt/">LinkedIn</a>
-                        <a className="navbar-item" href="/career">Career</a>
                         <hr className="navbar-divider" />
                         <a className="navbar-item is-active" href="/profile/resume.pdf" target="_blank">Resume</a>
                     </div>
