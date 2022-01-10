@@ -1,5 +1,6 @@
-import type { NextPage } from 'next'
-import Profile from '../components/profile'
+import React from "react";
+import type { NextPage } from "next"
+import Profile from "../components/profile"
 
 
 const Home: NextPage = () => {

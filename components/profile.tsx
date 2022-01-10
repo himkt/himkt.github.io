@@ -1,18 +1,20 @@
-import Image from "next/image";
+import React from "react";
 import Link from "next/link";
 import { FaTwitter, FaGithub, FaInstagram, FaGraduationCap } from 'react-icons/fa';
+
 
 const Profile = () => {
     return (
         <div className="w-full h-screen flex items-center justify-center">
             <div className="relative w-96 h-auto bg-sky-500 rounded-md pt-24 pb-8 px-4 shadow-2xl flex flex-col items-center">
-                <div className="absolute w-28 h-28 p-2 z-10 -top-8">
-                    <Image
-                        src="https://pbs.twimg.com/profile_images/1324212936764661760/jKbbNgTM_400x400.jpg"
-                        alt="Profile"
-                        layout="fill"
-                        className="rounded-full"
-                    />
+                <div className="absolute rounded-full bg-yellow-400 w-28 h-28 p-2 z-10 -top-8 shadow-lg hover:shadow-xl transition">
+                    <div className="rounded-full bg-black w-full h-full overflow-auto">
+                        <img
+                            src="https://pbs.twimg.com/profile_images/1324212936764661760/jKbbNgTM_400x400.jpg"
+                            alt="Profile"
+                            className="rounded-full"
+                        />
+                    </div>
                 </div>
                 <label className="font-bold text-yellow-400 text-lg">
                     Makoto Hiramatsu
