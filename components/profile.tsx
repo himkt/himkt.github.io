@@ -17,7 +17,7 @@ const Profile = () => {
                     </div>
                 </div>
                 <label className="font-bold text-yellow-400 text-lg">
-                    Makoto Hiramatsu
+                    himkt (M.S. in Informatics)
                 </label>
                 <p className="text-center text-gray-200 mt-2 leading-relaxed">
                     Software engineer who is interested in machine learning and human language technology.
