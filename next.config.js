@@ -1,14 +1,7 @@
+/** @type {import('next').NextConfig} */
 module.exports = {
-    images: {
-        disableStaticImages: true
-    },
-    webpack (config, options) {
-        config.module.rules.push({
-            test: /\.png$/,
-            use: {
-                loader: 'url-loader',
-            }
-        })
-        return config
-    }
+  reactStrictMode: true,
+  images: {
+    domains: ['pbs.twimg.com'],
+  },
 }
