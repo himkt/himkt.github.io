@@ -49,10 +49,10 @@ const Bib = ({ paper, setIsOpen }: Props) => {
         ">{constructBibText(paper)}</pre>
       </div>
       <div className="space-x-2">
-        <button className="rounded-md bg-white hover:bg-blue-500 transition duration-700">
+        <button className="outline-none rounded-md bg-white hover:bg-blue-500 transition duration-700">
           <p className="text-xs font-bold mx-2 my-1">Copy</p>
         </button>
-        <button className="rounded-md bg-white hover:bg-blue-500 transition duration-700" onClick={ () => setIsOpen(false) }>
+        <button className="outline-none rounded-md bg-white hover:bg-blue-500 transition duration-700" onClick={ () => setIsOpen(false) }>
           <p className="text-xs font-bold mx-2 my-1">Close</p>
         </button>
       </div>
