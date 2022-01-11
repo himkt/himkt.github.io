@@ -1,9 +1,10 @@
-import React from "react";
+import React, { Dispatch, SetStateAction } from "react";
 import Paper from "../types/paper";
 
 
 type Props = {
   paper: Paper;
+  setIsOpen: Dispatch<SetStateAction<boolean>>;
 }
 
 
@@ -30,14 +31,30 @@ const constructBibText = (paper: Paper) => {
 }
 
 
-const Bib = ({ paper, }: Props) => {
+const Bib = ({ paper, setIsOpen }: Props) => {
   return (
     <>
-      <div className="float-right bg-gray-400 border-2 border-indigo-500 rounded-md px-3">
-        <button className="font-mono font-semibold text-xs">Copy</button>
-      </div>
       <div>
-      <pre className="px-6 pb-4 pt-6 text-xs whitespace-pre-wrap">{ constructBibText(paper) }</pre>
+        <pre className="
+          my-4
+          bg-slate-100/20
+          backdrop-blur-sm
+          shadow-md
+          rounded-md
+          px-6
+          pb-4
+          pt-6
+          text-xs
+          whitespace-pre-wrap
+        ">{constructBibText(paper)}</pre>
+      </div>
+      <div className="space-x-2">
+        <button className="rounded-md bg-white hover:bg-blue-500 transition duration-700">
+          <p className="text-xs font-bold mx-2 my-1">Copy</p>
+        </button>
+        <button className="rounded-md bg-white hover:bg-blue-500 transition duration-700" onClick={ () => setIsOpen(false) }>
+          <p className="text-xs font-bold mx-2 my-1">Close</p>
+        </button>
       </div>
     </>
   );

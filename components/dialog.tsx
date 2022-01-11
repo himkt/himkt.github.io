@@ -20,12 +20,13 @@ const PaperDialog = ({ isOpen, setIsOpen, paper }: Props) => {
         onClose={() => setIsOpen(false)}
       >
         <div className="min-h-screen px-4 text-center">
+          {/* overlay のタイミング */}
           <Transition.Child
             as={Fragment}
-            enter="transform ease-out duration-300"
+            enter="ease-out duration-500"
             enterFrom="opacity-0"
             enterTo="opacity-100"
-            leave="ease-in duration-300"
+            leave="ease-out duration-500"
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
@@ -40,6 +41,15 @@ const PaperDialog = ({ isOpen, setIsOpen, paper }: Props) => {
             &#8203;
           </span>
 
+          <Transition.Child
+            as={Fragment}
+            enter="ease-out duration-500"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="ease-in duration-500"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
           <div className="
             inline-block
             w-full
@@ -51,20 +61,18 @@ const PaperDialog = ({ isOpen, setIsOpen, paper }: Props) => {
             align-middle
             transition-all
             transform
-            bg-white
+            bg-violet-100/60
             shadow-xl
             rounded-2xl
+            backdrop-blur-sm
           "
           >
-            <Dialog.Title
-              className="text-lg font-bold leading-6 text-gray-900"
-            >
+            <Dialog.Title className="text-lg font-bold leading-6 text-gray-900">
               {paper.title}
             </Dialog.Title>
-            <div className="my-4 bg-gray-200 rounded-md">
-              <Bib paper={paper} />
-            </div>
+            <Bib paper={paper} setIsOpen={setIsOpen} />
           </div>
+          </Transition.Child>
         </div>
       </Dialog>
     </Transition>
