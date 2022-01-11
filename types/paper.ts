@@ -1,5 +1,5 @@
 type Paper = {
-  authors: string;
+  authors: string[];
   isRead: string;
   issueLink: string;
   keywords: string;
