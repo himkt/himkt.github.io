@@ -23,9 +23,7 @@ const Body = (props: { paper: Paper, key: number }) => {
           </div>
         </span>
       </div>
-      {isOpen &&
-        <PaperDialog isOpen={true} setIsOpen={setIsOpen} paper={props.paper} />
-      }
+      <PaperDialog isOpen={isOpen} setIsOpen={setIsOpen} paper={props.paper} />
     </div>
   );
 }
