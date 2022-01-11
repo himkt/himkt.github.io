@@ -6,7 +6,7 @@ import { FaTwitter, FaGithub, FaInstagram, FaGraduationCap } from 'react-icons/f
 const Profile = () => {
     return (
         <div className="w-full h-screen flex items-center justify-center">
-            <div className="relative w-96 h-auto bg-sky-500 rounded-md pt-24 pb-8 px-4 shadow-2xl flex flex-col items-center">
+            <div className="relative w-80 h-auto bg-sky-500 rounded-md pt-24 pb-8 px-4 shadow-2xl flex flex-col items-center">
                 <div className="absolute rounded-full bg-yellow-400 w-28 h-28 p-2 z-10 -top-8 shadow-lg hover:shadow-xl transition">
                     <div className="rounded-full bg-black w-full h-full overflow-auto">
                         <img
