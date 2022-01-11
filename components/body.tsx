@@ -18,10 +18,10 @@ const Body = (props: { paper: Paper, key: number }) => {
         </Link >
         <div className="text-sm text-gray-500">{props.paper.authors.join(" ")}</div>
         <span className="flex">
-        <div className="my-1 bg-red-300 rounded-md">
-          <div className="text-sm font-mono mx-1">{props.paper.sourceShort}{props.paper.year}</div>
-        </div>
-      </span>
+          <div className="my-1 bg-red-300 rounded-md">
+            <div className="text-sm font-mono mx-1">{props.paper.sourceShort}{props.paper.year}</div>
+          </div>
+        </span>
       </div>
       {isOpen &&
         <PaperDialog isOpen={true} setIsOpen={setIsOpen} paper={props.paper} />

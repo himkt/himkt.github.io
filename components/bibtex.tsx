@@ -37,7 +37,7 @@ const Bib = ({ paper, }: Props) => {
         <button className="font-mono font-semibold text-xs">Copy</button>
       </div>
       <div>
-      <pre className="px-6 pb-4 pt-6 text-xs">{ constructBibText(paper) }</pre>
+      <pre className="px-6 pb-4 pt-6 text-xs whitespace-pre-wrap">{ constructBibText(paper) }</pre>
       </div>
     </>
   );
