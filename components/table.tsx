@@ -20,7 +20,7 @@ const Table = () => {
     }
     {
       !isLoading &&
-      <div className="table-fixed border-separate border-spacing">
+      <div className="table-fixed space-y-2">
         {
           data?.map((paper: Paper, idx: number) => <Body paper={paper} key={idx} />)
         }
