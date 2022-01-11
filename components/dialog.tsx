@@ -1,6 +1,7 @@
 import React, { Dispatch, Fragment, SetStateAction } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import Paper from "../types/paper";
+import Bib from "./bibtex";
 
 
 type Props = {
@@ -39,13 +40,16 @@ const PaperDialog = ({ isOpen, setIsOpen, paper }: Props) => {
             &#8203;
           </span>
 
-          <div className="inline-block w-full max-w-md p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
+          <div className="inline-block w-full max-w-screen-xl p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
             <Dialog.Title
               as="h3"
               className="text-lg font-medium leading-6 text-gray-900"
             >
               {paper.title}
             </Dialog.Title>
+            <div className="my-4 bg-gray-200 rounded-md">
+              <Bib paper={paper} />
+            </div>
           </div>
         </div>
       </Dialog>

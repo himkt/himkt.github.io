@@ -5,7 +5,7 @@ import Body from "./body";
 
 
 const Table = () => {
-  const appId = "AKfycbzgdVECE7gCyvJcSnO5z2NEdBdpsOQYba6EsTlsyVZN6gqzjGYYxH2KLaE-C9bEc0LOYA";
+  const appId = "AKfycbx1BW2FiLIOs-NPVDm-w2bBE2e_ci2KiqX0ezMqHKJbV1EtGOVldYzCQm6F6rZER6dj";
   const endpoint = `https://script.google.com/macros/s/${appId}/exec`;
 
   const fetcher: Fetcher<Paper[], string> = (url: string) => fetch(url).then(res => res.json())

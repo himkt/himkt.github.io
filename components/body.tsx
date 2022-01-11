@@ -16,7 +16,7 @@ const Body = (props: { paper: Paper, key: number }) => {
             {props.paper.title}
           </a>
         </Link >
-        <div className="text-sm text-gray-500">{props.paper.authors}</div>
+        <div className="text-sm text-gray-500">{props.paper.authors.join(" ")}</div>
         <span className="flex">
         <div className="my-1 bg-red-300 rounded-md">
           <div className="text-sm font-mono mx-1">{props.paper.sourceShort}{props.paper.year}</div>
