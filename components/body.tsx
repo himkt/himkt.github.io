@@ -10,7 +10,7 @@ const Body = (props: { paper: Paper; key: number }) => {
   return (
     <div
       onClick={() => setIsOpen(true)}
-      className="transition duration-300 hover:bg-indigo-200 rounded-md max-w-3xl mx-auto"
+      className="transition duration-300 md:hover:bg-indigo-300 rounded-md max-w-3xl mx-auto"
     >
       <div className="text-lg font-mono mx-4 py-2">
         <Link href={props.paper.paperLink}>
