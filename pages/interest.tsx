@@ -7,13 +7,11 @@ import { NextPage } from 'next';
 import Head from 'next/head';
 
 const Interest: NextPage = () => {
-  const appId =
-    'AKfycbx1BW2FiLIOs-NPVDm-w2bBE2e_ci2KiqX0ezMqHKJbV1EtGOVldYzCQm6F6rZER6dj';
+  const appId = 'AKfycbx1BW2FiLIOs-NPVDm-w2bBE2e_ci2KiqX0ezMqHKJbV1EtGOVldYzCQm6F6rZER6dj';
   const endpoint = `https://script.google.com/macros/s/${appId}/exec`;
 
   const [searchKeyword, setSearchKeyword] = useState('');
-  const fetcher: Fetcher<Paper[], string> = (url: string) =>
-    fetch(url).then((res) => res.json());
+  const fetcher: Fetcher<Paper[], string> = (url: string) => fetch(url).then((res) => res.json());
   const { data, error } = useSWR(endpoint, fetcher);
   const isLoading = !error && !data;
 

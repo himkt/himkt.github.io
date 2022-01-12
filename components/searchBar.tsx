@@ -11,10 +11,7 @@ const SearchBar = ({ setSearchKeyword }: Props) => {
   };
 
   return (
-    <nav
-      className="flex p-8 bg-white/40"
-      style={{ position: 'fixed', width: '100%', top: 0 }}
-    >
+    <nav className="flex p-8 bg-white/40" style={{ position: 'fixed', width: '100%', top: 0 }}>
       <div className="sm:container mx-auto flex justify-center">
         <div className="relative">
           <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
