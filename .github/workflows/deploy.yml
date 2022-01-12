@@ -30,11 +30,11 @@ jobs:
 
     - run: yarn install
 
+    - run: sudo apt install git && git rev-parse HEAD > public/revision
+
     - run: yarn build
 
     - run: yarn export
-
-    - run: sudo apt install git && git rev-parse HEAD > public/revision.txt
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
