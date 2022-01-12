@@ -12,11 +12,7 @@ type Props = {
 const PaperDialog = ({ isOpen, setIsOpen, paper }: Props) => {
   return (
     <Transition appear show={isOpen} as={Fragment}>
-      <Dialog
-        as="div"
-        className="fixed inset-0 z-10 overflow-y-auto"
-        onClose={() => setIsOpen(false)}
-      >
+      <Dialog as="div" className="fixed inset-0 z-10 overflow-y-auto" onClose={() => setIsOpen(false)}>
         <div className="min-h-screen px-4 text-center">
           {/* overlay のタイミング */}
           <Transition.Child
@@ -32,10 +28,7 @@ const PaperDialog = ({ isOpen, setIsOpen, paper }: Props) => {
           </Transition.Child>
 
           {/* This element is to trick the browser into centering the modal contents. */}
-          <span
-            className="inline-block h-screen align-middle"
-            aria-hidden="true"
-          >
+          <span className="inline-block h-screen align-middle" aria-hidden="true">
             &#8203;
           </span>
 
@@ -66,9 +59,7 @@ const PaperDialog = ({ isOpen, setIsOpen, paper }: Props) => {
             backdrop-blur-sm
           "
             >
-              <Dialog.Title className="text-lg font-bold leading-6 text-gray-900">
-                {paper.title}
-              </Dialog.Title>
+              <Dialog.Title className="text-lg font-bold leading-6 text-gray-900">{paper.title}</Dialog.Title>
               <Bib paper={paper} setIsOpen={setIsOpen} />
             </div>
           </Transition.Child>
