@@ -25,10 +25,10 @@ const Interest = () => {
       )}
       {!isLoading && (
         <>
-          <div className="sm:container mx-auto px-10 mt-10 mb-24">
+          <SearchBar setSearchKeyword={setSearchKeyword} />
+          <div className="sm:container mx-auto px-10 mt-32 mb-10">
             <Table papers={data} searchKeyword={searchKeyword} />
           </div>
-          <SearchBar setSearchKeyword={setSearchKeyword} />
         </>
       )}
     </>
