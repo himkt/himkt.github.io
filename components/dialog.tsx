@@ -1,15 +1,13 @@
-import React, { Dispatch, Fragment, SetStateAction } from "react";
-import { Dialog, Transition } from "@headlessui/react";
-import Paper from "../types/paper";
-import Bib from "./bibtex";
-
+import React, { Dispatch, Fragment, SetStateAction } from 'react';
+import { Dialog, Transition } from '@headlessui/react';
+import Paper from '../types/paper';
+import Bib from './bibtex';
 
 type Props = {
   isOpen: boolean;
   setIsOpen: Dispatch<SetStateAction<boolean>>;
   paper: Paper;
-}
-
+};
 
 const PaperDialog = ({ isOpen, setIsOpen, paper }: Props) => {
   return (
@@ -50,7 +48,8 @@ const PaperDialog = ({ isOpen, setIsOpen, paper }: Props) => {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-          <div className="
+            <div
+              className="
             inline-block
             w-full
             max-w-[80%]
@@ -66,18 +65,17 @@ const PaperDialog = ({ isOpen, setIsOpen, paper }: Props) => {
             rounded-2xl
             backdrop-blur-sm
           "
-          >
-            <Dialog.Title className="text-lg font-bold leading-6 text-gray-900">
-              {paper.title}
-            </Dialog.Title>
-            <Bib paper={paper} setIsOpen={setIsOpen} />
-          </div>
+            >
+              <Dialog.Title className="text-lg font-bold leading-6 text-gray-900">
+                {paper.title}
+              </Dialog.Title>
+              <Bib paper={paper} setIsOpen={setIsOpen} />
+            </div>
           </Transition.Child>
         </div>
       </Dialog>
     </Transition>
-  )
-}
-
+  );
+};
 
 export default PaperDialog;

@@ -13,5 +13,4 @@ type Paper = {
   year: string;
 };
 
-
 export default Paper;

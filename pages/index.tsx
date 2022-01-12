@@ -1,7 +1,6 @@
-import React from "react";
-import type { NextPage } from "next"
-import Profile from "../components/profile"
-
+import React from 'react';
+import type { NextPage } from 'next';
+import Profile from '../components/profile';
 
 const Home: NextPage = () => {
   return (
@@ -12,7 +11,7 @@ const Home: NextPage = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

@@ -1,14 +1,18 @@
-import React from "react";
-import { FaSearch } from "react-icons/fa";
-
+import React from 'react';
+import { FaSearch } from 'react-icons/fa';
 
 const Header = () => {
   return (
-    <nav className="flex bg-indigo-500 p-4" style={{ position: "fixed", width: "100%" }}>
+    <nav
+      className="flex bg-indigo-500 p-4"
+      style={{ position: 'fixed', width: '100%' }}
+    >
       <div className="sm:container mx-auto px-14">
         <div className="relative rounded-md shadow-sm">
           <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-            <span className="text-gray-500 sm:text-sm"><FaSearch /></span>
+            <span className="text-gray-500 sm:text-sm">
+              <FaSearch />
+            </span>
           </div>
           <input
             type="text"
@@ -36,7 +40,6 @@ const Header = () => {
       </div>
     </nav>
   );
-}
-
+};
 
 export default Header;
