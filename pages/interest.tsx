@@ -1,5 +1,5 @@
-import React from 'react';
-import Header from '../components/header';
+import React, { useState } from 'react';
+import SearchBar from '../components/searchBar';
 import Table from '../components/table';
 import useSWR, { Fetcher } from 'swr';
 import Paper from '../types/paper';
@@ -14,6 +14,8 @@ const Interest = () => {
   const { data, error } = useSWR(endpoint, fetcher);
   const isLoading = !error && !data;
 
+  const [searchKeyword, setSearchKeyword] = useState('');
+
   return (
     <>
       {isLoading && (
@@ -23,10 +25,10 @@ const Interest = () => {
       )}
       {!isLoading && (
         <>
-          <Header />
-          <div className="sm:container mx-auto px-10 pt-24">
-            <Table papers={data} />
+          <div className="sm:container mx-auto px-10 mt-10 mb-24">
+            <Table papers={data} searchKeyword={searchKeyword} />
           </div>
+          <SearchBar setSearchKeyword={setSearchKeyword} />
         </>
       )}
     </>
