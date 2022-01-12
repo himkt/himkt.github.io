@@ -8,14 +8,14 @@ type Props = {
 };
 
 const search = (paper: Paper, searchKeyword: string) => {
-  if (searchKeyword === "") return true;
+  if (searchKeyword === '') return true;
 
   const searchFields = [
     paper.title,
-    paper.authors.join(" "),
+    paper.authors.join(' '),
     paper.source,
     paper.sourceShort,
-  ]
+  ];
 
   for (const field of searchFields) {
     const q = searchKeyword.toLocaleLowerCase();
