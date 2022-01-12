@@ -3,8 +3,9 @@ import SearchBar from '../components/searchBar';
 import Table from '../components/table';
 import useSWR, { Fetcher } from 'swr';
 import Paper from '../types/paper';
+import { NextPage } from 'next';
 
-const Interest = () => {
+const Interest: NextPage = () => {
   const appId =
     'AKfycbx1BW2FiLIOs-NPVDm-w2bBE2e_ci2KiqX0ezMqHKJbV1EtGOVldYzCQm6F6rZER6dj';
   const endpoint = `https://script.google.com/macros/s/${appId}/exec`;

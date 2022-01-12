@@ -2,7 +2,7 @@ import React from 'react';
 import type { NextPage } from 'next';
 import Profile from '../components/profile';
 
-const Home: NextPage = () => {
+const Index: NextPage = () => {
   return (
     <div className="bg-gray-200">
       <div className="container mx-auto">
@@ -14,4 +14,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default Index;
