@@ -9,7 +9,7 @@ type Props = {
 
 
 const constructBibText = (paper: Paper) => {
-  const firstAuthor = (authors: string[]) => authors[0].split(" ")[0];
+  const firstAuthor = (authors: string[]) => authors.shift()?.split(" ").shift();
 
   let entry = '';
   if (paper.paperType == 'Conference paper') {
