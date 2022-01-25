@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import SearchBar from '../components/searchBar';
-import Table from '../components/table';
+import SearchBar from '../../components/searchBar';
+import Table from '../../components/table';
 import useSWR, { Fetcher } from 'swr';
-import Paper from '../types/paper';
+import Paper from '../../types/paper';
 import { NextPage } from 'next';
 import Head from 'next/head';
 

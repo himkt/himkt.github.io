@@ -1,6 +1,6 @@
 import React from 'react';
 import type { NextPage } from 'next';
-import Profile from '../components/profile';
+import Profile from '../../components/profile';
 import Head from 'next/head';
 
 const Index: NextPage = () => {
