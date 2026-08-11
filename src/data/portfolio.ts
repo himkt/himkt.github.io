@@ -133,6 +133,7 @@ export const publications: Publication[] = [
     authors: 'Makoto Hiramatsu, Kei Wakabayashi',
     venue: 'eCom @ SIGIR',
     year: 2018,
+    url: 'https://dblp.org/rec/conf/sigir/HiramatsuW18.html',
   },
 ];
 
