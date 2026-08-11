@@ -1,0 +1,44 @@
+---
+import { profile } from '../data/portfolio';
+
+const navLinks = [
+  { label: 'Software', href: '#software' },
+  { label: 'Research', href: '#research' },
+  { label: 'Writing', href: '#writing' },
+  { label: 'Experience', href: '#experience' },
+];
+---
+
+<header
+  id="site-header"
+  class="sticky top-0 z-10 border-b border-zinc-200 bg-zinc-50 transition-colors duration-300 data-scrolled:border-transparent data-scrolled:bg-zinc-50/40 data-scrolled:backdrop-blur-md dark:border-zinc-800 dark:bg-zinc-950 dark:data-scrolled:bg-zinc-950/40"
+>
+  <div class="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-5">
+    <a
+      href="#"
+      class="font-mono text-base font-bold text-sky-600 hover:text-sky-500 dark:text-sky-400 dark:hover:text-sky-300"
+    >
+      @{profile.handle}
+    </a>
+    <nav aria-label="Sections" class="flex items-center gap-4 sm:gap-8">
+      {
+        navLinks.map((link) => (
+          <a
+            href={link.href}
+            class="text-sm font-bold text-zinc-900 hover:text-sky-600 dark:text-zinc-100 dark:hover:text-sky-400"
+          >
+            {link.label}
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+</header>
+
+<script>
+  const header = document.getElementById('site-header');
+  if (!header) throw new Error('site-header element is missing');
+  const update = () => header.toggleAttribute('data-scrolled', window.scrollY > 16);
+  update();
+  window.addEventListener('scroll', update, { passive: true });
+</script>

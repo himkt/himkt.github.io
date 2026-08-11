@@ -1,7 +1,9 @@
 ---
 import { Icon } from 'astro-icon/components';
 import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
+import Footer from '../components/Footer.astro';
 import Section from '../components/Section.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import ExternalLinkIcon from '../components/ExternalLinkIcon.astro';
@@ -28,6 +30,7 @@ const publicationsByYear = publicationYears.map((year) => ({
 ---
 
 <Base>
+  <Header />
   <Hero />
 
   <Section
@@ -165,7 +168,5 @@ const publicationsByYear = publicationYears.map((year) => ({
     </ol>
   </Section>
 
-  <footer class="mx-auto w-full max-w-6xl px-6 py-10 text-sm text-zinc-500 dark:text-zinc-400">
-    © {new Date().getFullYear()} himkt
-  </footer>
+  <Footer />
 </Base>
