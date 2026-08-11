@@ -261,7 +261,7 @@ export const experiences: Experience[] = [
     role: 'Software Engineer',
     organization: 'Preferred Networks, Inc.',
     summary:
-      'Software development for Matlantis, an AI-powered atomistic simulation platform for materials discovery (AI4Science).',
+      'Software development for Matlantis, a neural network based atomistic simulation platform for materials discovery.',
   },
   {
     period: '2019 — 2022',
@@ -274,7 +274,7 @@ export const experiences: Experience[] = [
     role: 'Software Engineer / Researcher',
     organization: 'Cookpad, Inc.',
     summary:
-      'Machine learning and NLP for a large-scale recipe service: named entity recognition, corpus construction, and calorie estimation.',
+      'Service development / NLP for a large-scale recipe service: named entity recognition, corpus construction, and recommendation.',
   },
   {
     period: '2017 — 2019',
