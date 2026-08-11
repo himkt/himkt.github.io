@@ -1,0 +1,186 @@
+---
+import { Icon } from 'astro-icon/components';
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import Section from '../components/Section.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import ExternalLinkIcon from '../components/ExternalLinkIcon.astro';
+import {
+  software,
+  publications,
+  articles,
+  platformIcons,
+  writingProfiles,
+  experiences,
+} from '../data/portfolio';
+
+const years = [...new Set(articles.map((article) => article.date.slice(0, 4)))];
+const articlesByYear = years.map((year) => ({
+  year,
+  items: articles.filter((article) => article.date.startsWith(year)),
+}));
+
+const publicationYears = [...new Set(publications.map((publication) => publication.year))];
+const publicationsByYear = publicationYears.map((year) => ({
+  year,
+  items: publications.filter((publication) => publication.year === year),
+}));
+---
+
+<Base>
+  <Hero />
+
+  <Section
+    id="software"
+    title="Software"
+    subtitle="Libraries I author and maintain, and major frameworks I contribute to."
+  >
+    <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {software.map((project) => <ProjectCard project={project} />)}
+    </div>
+  </Section>
+
+  <Section
+    id="research"
+    title="Research"
+    subtitle="Natural language processing, with a focus on Japanese text and real-world applications."
+  >
+    <div class="space-y-8">
+      {
+        publicationsByYear.map(({ year, items }) => (
+          <div class="grid gap-2 sm:grid-cols-[4rem_1fr] sm:gap-6">
+            <h3 class="font-mono text-sm text-zinc-400 dark:text-zinc-500">{year}</h3>
+            <ul class="space-y-4">
+              {items.map((publication) => (
+                <li class="text-sm">
+                  {publication.url ? (
+                    <a
+                      href={publication.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      class="font-medium text-zinc-900 hover:text-sky-600 dark:text-zinc-100 dark:hover:text-sky-400"
+                    >
+                      {publication.title}
+                      <ExternalLinkIcon class="ml-1 inline h-3.5 w-3.5 align-text-top" />
+                    </a>
+                  ) : (
+                    <span class="font-medium text-zinc-900 dark:text-zinc-100">
+                      {publication.title}
+                    </span>
+                  )}
+                  <p class="mt-1 text-zinc-500 dark:text-zinc-400">
+                    {publication.authors} · {publication.venue}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+    <p class="mt-4 text-sm text-zinc-500 dark:text-zinc-400">
+      Full list on{' '}
+      <a
+        href="https://scholar.google.com/citations?user=48jLQIwAAAAJ"
+        target="_blank"
+        rel="noreferrer"
+        class="text-sky-600 hover:underline dark:text-sky-400">Google Scholar</a
+      >.
+    </p>
+  </Section>
+
+  <Section
+    id="writing"
+    title="Writing"
+    subtitle="Technical writing on NLP, machine learning, and developer tooling."
+  >
+    <div class="space-y-8">
+      {
+        articlesByYear.map(({ year, items }) => (
+          <div class="grid gap-2 sm:grid-cols-[4rem_1fr] sm:gap-6">
+            <h3 class="font-mono text-sm text-zinc-400 dark:text-zinc-500">{year}</h3>
+            <ul class="space-y-2.5">
+              {items.map((article) => (
+                <li class="flex items-start gap-2.5 text-sm">
+                  <Icon
+                    name={platformIcons[article.platform]}
+                    title={article.platform}
+                    class="mt-0.5 h-4 w-4 shrink-0 text-zinc-400 dark:text-zinc-500"
+                  />
+                  <a
+                    href={article.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    class="text-zinc-700 hover:text-sky-600 dark:text-zinc-300 dark:hover:text-sky-400"
+                  >
+                    {article.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+    <p class="mt-8 text-sm text-zinc-500 dark:text-zinc-400">
+      All articles on{' '}
+      {
+        writingProfiles.map((profile, index) => (
+          <>
+            <a
+              href={profile.url}
+              target="_blank"
+              rel="noreferrer"
+              class="text-sky-600 hover:underline dark:text-sky-400"
+            >
+              {profile.name}
+            </a>
+            {index < writingProfiles.length - 1 ? ' · ' : ''}
+          </>
+        ))
+      }
+    </p>
+  </Section>
+
+  <Section id="experience" title="Experience">
+    <ol class="space-y-6">
+      {
+        experiences.map((experience) => (
+          <li class="grid gap-1 sm:grid-cols-[10rem_1fr] sm:gap-6">
+            <span class="font-mono text-sm text-zinc-500 dark:text-zinc-400">
+              {experience.period}
+            </span>
+            <div>
+              <p class="font-medium text-zinc-900 dark:text-zinc-100">
+                {experience.organization}
+              </p>
+              <p class="mt-1">
+                <span
+                  class="rounded-full bg-zinc-100 px-2.5 py-0.5 text-xs font-medium text-zinc-600 dark:bg-zinc-800 dark:text-zinc-300"
+                >
+                  {experience.role}
+                </span>
+              </p>
+              <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">{experience.summary}</p>
+            </div>
+          </li>
+        ))
+      }
+    </ol>
+  </Section>
+
+  <footer class="mx-auto w-full max-w-6xl px-6 py-10 text-sm text-zinc-500 dark:text-zinc-400">
+    © {new Date().getFullYear()} Makoto Hiramatsu · Built with
+    <a href="https://astro.build" class="hover:underline" target="_blank" rel="noreferrer">Astro</a>
+    and
+    <a href="https://tailwindcss.com" class="hover:underline" target="_blank" rel="noreferrer"
+      >Tailwind CSS</a
+    > ·
+    <a
+      href="https://github.com/himkt/himkt.github.io"
+      class="hover:underline"
+      target="_blank"
+      rel="noreferrer">Source</a
+    >
+  </footer>
+</Base>

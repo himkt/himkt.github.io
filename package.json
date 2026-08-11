@@ -1,33 +1,25 @@
 {
   "name": "himkt.github.io",
   "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.19.0",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "export": "next export",
-    "format": "prettier --write components pages types"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "format": "prettier --write src"
   },
   "dependencies": {
-    "@headlessui/react": "^1.4.2",
-    "@typescript-eslint/eslint-plugin": "^5.9.0",
-    "autoprefixer": "^10.4.2",
-    "nanoid": "3.1.31",
-    "next": "12.0.9",
-    "postcss": "^8.4.5",
-    "prettier": "^2.5.1",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-icons": "^4.3.1",
-    "swr": "^1.1.2",
-    "tailwindcss": "^3.0.12"
+    "@iconify-json/fa6-brands": "^1.2.6",
+    "@iconify-json/lucide": "^1.2.122",
+    "@iconify-json/simple-icons": "^1.2.93",
+    "astro": "^7.2.0",
+    "astro-icon": "^1.1.5"
   },
   "devDependencies": {
-    "@types/node": "17.0.8",
-    "@types/react": "17.0.38",
-    "eslint": "8.6.0",
-    "eslint-config-next": "12.0.7",
-    "typescript": "4.5.4"
+    "@tailwindcss/vite": "^4.3.3",
+    "prettier": "^3.6.0",
+    "prettier-plugin-astro": "^0.14.1",
+    "tailwindcss": "^4.3.3"
   }
 }
