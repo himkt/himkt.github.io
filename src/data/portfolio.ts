@@ -55,7 +55,7 @@ export const software: Project[] = [
   {
     name: 'Optuna',
     role: 'Committer',
-    description: 'Hyperparameter optimization framework; 110+ merged PRs, release manager for v3.',
+    description: 'Automatic hyperparameter optimization framework for machine learning.',
     url: 'https://github.com/optuna/optuna',
     tags: ['Python', 'ML'],
   },
@@ -136,13 +136,14 @@ export type Article = {
   date: string;
   title: string;
   url: string;
-  platform: 'Zenn' | 'Qiita' | 'Medium';
+  platform: 'Zenn' | 'Qiita' | 'Medium' | 'AllenNLP Guide';
 };
 
 export const platformIcons: Record<Article['platform'], string> = {
   Zenn: 'simple-icons:zenn',
   Qiita: 'simple-icons:qiita',
   Medium: 'simple-icons:medium',
+  'AllenNLP Guide': 'lucide:book-open',
 };
 
 export const writingProfiles = [
@@ -189,17 +190,23 @@ export const articles: Article[] = [
     platform: 'Medium',
   },
   {
+    date: '2020-09',
+    title: 'Hyperparameter Optimization chapter in the AllenNLP Guide',
+    url: 'https://github.com/allenai/allennlp-guide/pull/138',
+    platform: 'AllenNLP Guide',
+  },
+  {
     date: '2020-08',
     title: 'Hyperparameter Optimization for AllenNLP Using Optuna (PyTorch publication)',
     url: 'https://medium.com/pytorch/hyperparameter-optimization-for-allennlp-using-optuna-acb8d96737e5',
     platform: 'Medium',
   },
-  {
-    date: '2020-06',
-    title: 'Hyperparameter optimization for AllenNLP using Optuna (Optuna publication)',
-    url: 'https://medium.com/optuna/hyperparameter-optimization-for-allennlp-using-optuna-54b4bfecd78b',
-    platform: 'Medium',
-  },
+  // {
+  //   date: '2020-06',
+  //   title: 'Hyperparameter optimization for AllenNLP using Optuna (Optuna publication)',
+  //   url: 'https://medium.com/optuna/hyperparameter-optimization-for-allennlp-using-optuna-54b4bfecd78b',
+  //   platform: 'Medium',
+  // },
   {
     date: '2020-05',
     title: 'Optuna で AllenNLP モデルのハイパーパラメータを最適化する',
