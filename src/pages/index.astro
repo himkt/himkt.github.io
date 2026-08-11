@@ -8,6 +8,7 @@ import Section from '../components/Section.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import ExternalLinkIcon from '../components/ExternalLinkIcon.astro';
 import {
+  profile,
   software,
   publications,
   articles,
@@ -72,8 +73,21 @@ const publicationsByYear = publicationYears.map((year) => ({
                     </span>
                   )}
                   <p class="mt-1 text-zinc-500 dark:text-zinc-400">
-                    {publication.authors} · {publication.venue}
+                    {publication.authors.split(profile.name).map((segment, index, segments) => (
+                      <>
+                        {segment}
+                        {index < segments.length - 1 && (
+                          <span class="underline underline-offset-2">{profile.name}</span>
+                        )}
+                      </>
+                    ))}{' '}
+                    · {publication.venue}
                   </p>
+                  {publication.note && (
+                    <p class="mt-0.5 text-xs italic text-zinc-400 dark:text-zinc-500">
+                      {publication.note}
+                    </p>
+                  )}
                 </li>
               ))}
             </ul>

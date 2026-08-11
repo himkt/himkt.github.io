@@ -12,6 +12,7 @@ export type Publication = {
   venue: string;
   year: number;
   url?: string;
+  note?: string;
 };
 
 export type Experience = {
@@ -103,6 +104,7 @@ export const publications: Publication[] = [
     venue: 'LAW (Linguistic Annotation Workshop)',
     year: 2020,
     url: 'https://aclanthology.org/2020.law-1.8/',
+    note: '* Equal contribution',
   },
   {
     title: 'Non-ingredient Detection in User-generated Recipes using the Sequence Tagging Approach',
@@ -116,6 +118,7 @@ export const publications: Publication[] = [
     authors: 'Jun Harashima, Makoto Hiramatsu, Kenta Sanjo',
     venue: 'AAAI / IAAI',
     year: 2020,
+    url: 'https://ojs.aaai.org/index.php/AAAI/article/view/7041',
   },
   {
     title:
@@ -123,6 +126,7 @@ export const publications: Publication[] = [
     authors: 'Makoto Hiramatsu, Kei Wakabayashi, Jun Harashima',
     venue: 'CICLing',
     year: 2019,
+    url: 'https://link.springer.com/chapter/10.1007/978-3-031-24340-0_4',
   },
   {
     title: 'Encoder-Decoder Neural Networks for Taxonomy Classification',
