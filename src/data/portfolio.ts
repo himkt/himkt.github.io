@@ -25,7 +25,7 @@ export const profile = {
   handle: 'himkt',
   name: 'Makoto Hiramatsu',
   tagline:
-    'Software engineer and researcher in Tokyo. Open-source committer on Optuna, author of Konoha and cafleet.',
+    'Software engineer for AI4Science at Preferred Networks, Inc. (Matlantis). Open-source committer on Optuna, author of Konoha and cafleet.',
   links: [
     { label: 'GitHub', url: 'https://github.com/himkt', icon: 'simple-icons:github' },
     { label: 'X (Twitter)', url: 'https://twitter.com/himkt', icon: 'simple-icons:x' },
