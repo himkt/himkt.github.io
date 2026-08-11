@@ -55,7 +55,7 @@ export const software: Project[] = [
   {
     name: 'Optuna',
     role: 'Committer',
-    description: 'Hyperparameter optimization framework; 110+ merged PRs, release manager for v3.',
+    description: 'Automatic hyperparameter optimization framework for machine learning.',
     url: 'https://github.com/optuna/optuna',
     tags: ['Python', 'ML'],
   },
