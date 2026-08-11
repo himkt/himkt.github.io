@@ -1,0 +1,42 @@
+---
+import { Icon } from 'astro-icon/components';
+import { profile } from '../data/portfolio';
+---
+
+<header class="mx-auto w-full max-w-6xl px-6 pt-20 pb-8">
+  <div class="flex flex-col gap-6 sm:flex-row sm:items-center sm:gap-10">
+    <img
+      src="/himkt.jpg"
+      alt={`Icon of ${profile.handle}`}
+      width="512"
+      height="512"
+      class="h-28 w-28 shrink-0 rounded-full object-cover shadow-md ring-2 ring-zinc-200 sm:h-36 sm:w-36 dark:ring-zinc-800"
+    />
+    <div>
+      <p class="font-mono text-sm text-sky-600 dark:text-sky-400">@{profile.handle}</p>
+      <h1
+        class="mt-1 text-4xl font-bold tracking-tight text-zinc-900 sm:text-5xl dark:text-zinc-100"
+      >
+        {profile.name}
+      </h1>
+      <p class="mt-4 max-w-2xl text-lg leading-relaxed text-zinc-600 dark:text-zinc-400">
+        {profile.tagline}
+      </p>
+    </div>
+  </div>
+  <nav aria-label="Profile links" class="mt-8 flex flex-wrap items-center gap-3">
+    {
+      profile.links.map((link) => (
+        <a
+          href={link.url}
+          target="_blank"
+          rel="noreferrer"
+          class="inline-flex items-center gap-1.5 rounded-lg border border-zinc-200 px-3 py-2 text-sm text-zinc-700 transition hover:border-sky-400 hover:text-sky-600 dark:border-zinc-800 dark:text-zinc-300 dark:hover:border-sky-500 dark:hover:text-sky-400"
+        >
+          <Icon name={link.icon} class="h-4 w-4" />
+          {link.label}
+        </a>
+      ))
+    }
+  </nav>
+</header>

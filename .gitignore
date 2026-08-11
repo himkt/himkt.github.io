@@ -1,6 +1,7 @@
 .*
 !.gitignore
-!.eslintrc.js
 !.prettierrc
+!.github
 
 /node_modules
+/dist
